@@ -1,0 +1,26 @@
+ion-toolbar{
+  
+    --background:white;
+}
+h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:black;
+
+}
+ion-card{
+    text-align: center;
+    border:2px solid white;
+    box-shadow: none;
+}
+
+ion-button{
+    width: 18rem;
+    --background:#113F61;
+}
+.already{
+    margin-top: 1rem;
+}
+.signIn{
+    color:#113F61;
+    margin-left:0.4rem;
+}

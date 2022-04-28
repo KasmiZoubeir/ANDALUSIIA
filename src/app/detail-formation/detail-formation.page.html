@@ -1,0 +1,73 @@
+  <ion-toolbar>
+    
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home1/Homme"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+
+
+<ion-content>
+  <div *ngFor="let formation of formations1" >
+
+    <div *ngIf="formation.titre == titre">
+      <ion-card  >
+        <ion-card-header>
+          <div class="header">
+            <ion-icon class="icon" name="{{ formation.icon_name }}"></ion-icon>
+            <ion-card-title>{{ formation.titre }}</ion-card-title>
+          </div>
+           
+        </ion-card-header>
+      
+        <ion-card-content>
+            {{ formation.description }}
+            <p class="ligne"></p>
+            <p class="appredrez">Ce que vous apprendrez</p>
+            <p class="appredrezDetail"><ion-icon class="check" name="checkmark-outline"></ion-icon>{{formation.apprendrez1}}</p>
+            <p class="appredrezDetail"><ion-icon class="check" name="checkmark-outline"></ion-icon>{{formation.apprendrez2}}</p>
+            <p class="appredrezDetail"><ion-icon class="check" name="checkmark-outline"></ion-icon>{{formation.apprendrez3}}</p>
+                   <p class="appredrezDetail"><ion-icon class="check" name="checkmark-outline"></ion-icon>{{formation.apprendrez4}}</p>
+                          <p class="appredrezDetail"><ion-icon class="check" name="checkmark-outline"></ion-icon>{{formation.apprendrez5}}</p>
+                          <p class="appredrezDetail"><ion-icon class="check" name="checkmark-outline"></ion-icon>{{formation.apprendrez6}}</p>
+                          <p class="ligne"></p>
+                          <p class="appredrez">Durée de formation: {{ formation.duree  }}h
+                            <br><p class="ligne1"></p>
+                          </p>
+                          
+                          
+                          <p class="appredrez">Date de formation: <span class="date">{{ formation.date  }}</span>
+                            <br><p class="ligne1"></p>
+                          </p>
+                          
+                         <p class="appredrez">Prix:{{ formation.prix |  currency }}
+                          
+                         </p>
+                         
+
+
+        </ion-card-content>
+        <br>
+        <button  (click)="subscribe(titre)" [ngStyle]="aaa"  class="detail">Subscribe</button> 
+        <div *ngFor="let formationadd of formations_choisir">
+         <div *ngIf="formationadd.formation_added == formation.titre && formationadd.uid == curruser ">
+          <button  class="detailClicked" >Done</button>
+
+         </div>
+              
+
+            </div>
+           
+
+
+
+            
+             
+            
+      </ion-card>
+     
+     
+    </div> 
+  </div>
+
+</ion-content>

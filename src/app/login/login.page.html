@@ -1,0 +1,56 @@
+
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+     <img src="assets/logo2.PNG">
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-item>
+        <ion-label>
+          
+          <ion-input [(ngModel)]="this.user.email" placeholder="User Name"></ion-input>
+          
+        </ion-label>
+      </ion-item>
+      <br>
+      <ion-item>
+        
+        <ion-label>
+          
+         
+          <ion-input [(ngModel)]="this.user.password" placeholder="Password" type="password"></ion-input>
+        </ion-label>
+      </ion-item>
+      <br>
+      
+        
+          
+         
+          <ion-label>
+          
+            <ion-button (click)="logIn()"> login</ion-button>
+           
+           
+        </ion-label>
+        <br>
+        <ion-label>
+          
+         <p class="dontHave">Don't have an account?<span (click)="signUp()" class="signUp">Sign Up</span> </p> 
+         
+         
+      </ion-label>
+    
+      
+    </ion-card-content>
+  </ion-card>
+  
+  
+  
+ 
+</ion-content>

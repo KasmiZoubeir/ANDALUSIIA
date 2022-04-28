@@ -1,0 +1,27 @@
+
+
+<ion-content>
+  <div *ngFor="let formationadd of formations_choisir">
+<div *ngFor="let formationbase of formations">
+  <ion-card  *ngIf="formationadd.formation_added == formationbase.titre && formationadd.uid == curruser">
+  
+    <ion-card-header>
+        <ion-icon class="icon" name="{{ formationbase.icon_name }}"></ion-icon>
+      <ion-card-title>{{ formationbase.titre }}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+        {{ formationbase.description }}
+    </ion-card-content>
+   <a href="/home1/Homme/{{formationbase.titre}}"><button   class="detail"> Détail</button></a> 
+  </ion-card>
+
+
+</div>
+   
+   
+  </div>
+  
+ 
+
+</ion-content>

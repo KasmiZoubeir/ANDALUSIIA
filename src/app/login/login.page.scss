@@ -1,0 +1,29 @@
+h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:black;
+
+}
+ion-toolbar{
+  
+    --background:white;
+}
+ion-card{
+    text-align: center;
+    border:2px solid white;
+    box-shadow: none;
+}
+ion-header {
+    margin-top:5rem;
+    
+}
+ion-button{
+    width: 18rem;
+    --background:#113F61;
+}
+.dontHave{
+    margin-top: 1rem;
+}
+.signUp{
+    color:#113F61;
+    margin-left:0.4rem;
+}

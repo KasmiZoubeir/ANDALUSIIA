@@ -1,0 +1,22 @@
+
+
+  <ion-toolbar>
+
+    <h5 >gmail : {{email}}</h5>
+  <a (click)="SignOut()"><p>Déconexion</p>  </a>
+  </ion-toolbar>
+
+  <ion-content>
+    <ion-card  *ngFor="let formation of formations">
+        <ion-card-header>
+            <ion-icon class="icon" name="{{ formation.icon_name }}"></ion-icon>
+          <ion-card-title>{{ formation.titre }}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+            {{ formation.description }}
+        </ion-card-content>
+       <a href="/home1/Homme/{{formation.titre}}"><button   class="detail"> Détail</button></a> 
+      </ion-card>
+  </ion-content>
+  
